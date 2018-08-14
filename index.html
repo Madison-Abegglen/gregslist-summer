@@ -8,28 +8,29 @@
   <title>Gregslist</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
     crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 
 <body>
 
   <form onsubmit="app.controllers.carController.addCar(event)">
     <label for="make">Make:</label>
-    <input type="text" name="make" placeholder="Make" required>
+    <input id="make" type="text" name="make" placeholder="Make" required>
 
     <label for="model">Model:</label>
-    <input type="text" name="model" placeholder="Model" required>
+    <input id="model" type="text" name="model" placeholder="Model" required>
 
     <label for="year">Year:</label>
-    <input type="number" name="year" placeholder="Year" value="2000" required>
+    <input id="year" type="number" name="year" placeholder="Year" value="2000" required>
 
-    <label for="price">Price:</label>
-    <input type="text" name="price" placeholder="Price" required>
+    <label for="car-price">Price:</label>
+    <input id="car-price" type="text" name="price" placeholder="Price" required>
 
-    <label for="color">Color:</label>
-    <input type="text" name="color" placeholder="Color" required>
+    <label for="description">Description:</label>
+    <input id="description" type="text" name="description" placeholder="Description" required>
 
-    <label for="imgUrl">Img:</label>
-    <input type="url" name="imgUrl" placeholder="Image Link" required>
+    <label for="car-img-url">Img:</label>
+    <input id="car-img-url" type="url" name="imgUrl" placeholder="Image Link" required>
 
     <button type="submit">Add Car</button>
   </form>
@@ -95,7 +96,7 @@
     </div>
   </div>
 
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
   <script src="main.js" type="module"></script>
 </body>
 
