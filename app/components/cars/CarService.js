@@ -1,7 +1,7 @@
 import Car from "../../models/Car.js";
 
 const carsApi = axios.create({
-  baseURL: "localhost:3000",
+  baseURL: "//localhost:3000/api/cars",
 
   timeout: 3000
 });
@@ -11,7 +11,7 @@ export default class CarService {
 
   getCars(draw) {
     carsApi.get().then(res => {
-      let cars = res.data.data.map(rawCar => {
+      let cars = res.data.map(rawCar => {
         return new Car(rawCar);
       });
       draw(cars);
